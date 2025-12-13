@@ -1,10 +1,10 @@
 # Script para configurar repositório Git e conectar com GitHub
-# Repositório: https://github.com/maicon456/ArcnetAI.git
+# Repositório: https://github.com/maicon456/Arcnet-AI.git
 
 Set-Location "C:\Users\maicon\Desktop\arc-da-pp-frontend"
 
 Write-Host "=== Configuração do Repositório GitHub ===" -ForegroundColor Cyan
-Write-Host "Repositório: https://github.com/maicon456/ArcnetAI.git" -ForegroundColor Yellow
+Write-Host "Repositório: https://github.com/maicon456/Arcnet-AI.git" -ForegroundColor Yellow
 Write-Host ""
 
 # Verificar se Git está instalado
@@ -67,18 +67,18 @@ Write-Host "=== Verificando Remote ===" -ForegroundColor Cyan
 $remoteUrl = git remote get-url origin 2>$null
 if ($remoteUrl) {
     Write-Host "✓ Remote já configurado: $remoteUrl" -ForegroundColor Green
-    if ($remoteUrl -ne "https://github.com/maicon456/ArcnetAI.git") {
-        Write-Host "⚠ URL diferente do esperado" -ForegroundColor Yellow
-        $update = Read-Host "Deseja atualizar para https://github.com/maicon456/ArcnetAI.git? (s/n)"
-        if ($update -eq "s") {
-            git remote set-url origin https://github.com/maicon456/ArcnetAI.git
+        if ($remoteUrl -ne "https://github.com/maicon456/Arcnet-AI.git") {
+            Write-Host "⚠ URL diferente do esperado" -ForegroundColor Yellow
+            $update = Read-Host "Deseja atualizar para https://github.com/maicon456/Arcnet-AI.git? (s/n)"
+            if ($update -eq "s") {
+                git remote set-url origin https://github.com/maicon456/Arcnet-AI.git
             Write-Host "✓ Remote atualizado" -ForegroundColor Green
         }
     }
 } else {
     Write-Host "⚠ Remote não configurado" -ForegroundColor Yellow
     Write-Host "Adicionando remote..." -ForegroundColor Yellow
-    git remote add origin https://github.com/maicon456/ArcnetAI.git
+    git remote add origin https://github.com/maicon456/Arcnet-AI.git
     Write-Host "✓ Remote adicionado" -ForegroundColor Green
 }
 
@@ -130,7 +130,7 @@ Write-Host ""
 Write-Host "=== Próximos Passos ===" -ForegroundColor Cyan
 Write-Host ""
 Write-Host "1. Certifique-se de que o repositório existe no GitHub:" -ForegroundColor Yellow
-Write-Host "   https://github.com/maicon456/ArcnetAI" -ForegroundColor White
+Write-Host "   https://github.com/maicon456/Arcnet-AI" -ForegroundColor White
 Write-Host ""
 Write-Host "2. Se o repositório não existe, crie no GitHub primeiro" -ForegroundColor Yellow
 Write-Host ""
