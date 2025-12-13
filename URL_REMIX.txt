@@ -1,0 +1,28 @@
+URLs para importar no Remix IDE:
+
+OPÇÃO 1 - URL Local (quando servidor estiver rodando):
+http://localhost:3000/VirtualAgent.sol
+
+Como usar:
+1. Certifique-se de que o servidor está rodando: pnpm dev
+2. No Remix IDE, clique em "File Explorer"
+3. Clique no ícone de pasta com "+" (importar)
+4. Selecione "Import from URL"
+5. Cole: http://localhost:3000/VirtualAgent.sol
+6. Clique em "OK"
+
+OPÇÃO 2 - Copiar e Colar (MAIS SIMPLES):
+1. Abra: VirtualAgent_For_Remix.sol
+2. Ctrl+A (selecionar tudo)
+3. Ctrl+C (copiar)
+4. No Remix: Criar arquivo VirtualAgent.sol
+5. Ctrl+V (colar)
+6. Ctrl+S (salvar)
+
+OPÇÃO 3 - GitHub Gist:
+1. Crie um Gist em: https://gist.github.com/
+2. Cole o código do VirtualAgent_For_Remix.sol
+3. Use a URL raw do Gist no Remix
+
+RECOMENDAÇÃO: Use a Opção 2 (Copiar e Colar) - é a mais rápida!
+

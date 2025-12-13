@@ -1,0 +1,21 @@
+[profile.default]
+src = "contracts"
+out = "out"
+libs = ["lib"]
+solc_version = "0.8.20"
+optimizer = true
+optimizer_runs = 200
+via_ir = false
+
+# Arc Network Configuration
+# Based on: https://docs.arc.network/arc/tutorials/deploy-on-arc
+[rpc_endpoints]
+arc_testnet = "https://rpc.testnet.arc.network"
+
+[etherscan]
+arc_testnet = { 
+  key = "${ARCSCAN_API_KEY}",
+  api_url = "https://api-testnet.arcscan.app/api"
+}
+
+
