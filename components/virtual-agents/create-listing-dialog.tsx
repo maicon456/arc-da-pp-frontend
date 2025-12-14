@@ -105,7 +105,7 @@ export function CreateListingDialog({ agent, userOwnership, onListingCreated }: 
   }
 
   const isLoading = isPending || isConfirming
-  const totalValue = price && amount ? parseEther(price) * BigInt(Math.floor(parseFloat(amount))) : 0n
+  const totalValue = price && amount ? parseEther(price) * BigInt(Math.floor(parseFloat(amount))) : BigInt(0)
 
   return (
     <Dialog open={open} onOpenChange={setOpen}>
