@@ -45,7 +45,7 @@ export function PurchaseTokensDialog({ agent }: PurchaseTokensDialogProps) {
   } = usePurchaseAgentTokens()
 
   const pricePerToken = formatEther(agent.price)
-  const totalCost = amount ? BigInt(Math.floor(parseFloat(amount) * parseFloat(pricePerToken) * 10 ** 18)) : 0n
+  const totalCost = amount ? BigInt(Math.floor(parseFloat(amount) * parseFloat(pricePerToken) * 10 ** 18)) : BigInt(0)
   const availableSupply = agent.totalSupply - agent.circulatingSupply
 
   useEffect(() => {
@@ -116,7 +116,7 @@ export function PurchaseTokensDialog({ agent }: PurchaseTokensDialogProps) {
         <DialogHeader>
           <DialogTitle>Purchase {agent.name} Tokens</DialogTitle>
           <DialogDescription>
-            Buy ownership tokens for this <span className="font-semibold text-primary">AI</span> (Inteligência Artificial) agent
+            Buy ownership tokens for this <span className="font-semibold text-primary">AI</span> agent
           </DialogDescription>
         </DialogHeader>
         <div className="space-y-4 py-4">
