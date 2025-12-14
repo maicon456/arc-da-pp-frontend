@@ -141,7 +141,7 @@ export function CreateAgentDialog({ onAgentCreated }: CreateAgentDialogProps) {
     if (isConfirmed && hash) {
       toast({
         title: 'Agent created! 🎉',
-        description: 'Your AI (Inteligência Artificial) agent has been tokenized on Arc Network',
+            description: 'Your AI agent has been tokenized on Arc Network',
       })
       setFormData({
         name: '',
@@ -174,7 +174,7 @@ export function CreateAgentDialog({ onAgentCreated }: CreateAgentDialogProps) {
             Create <span className="font-semibold text-primary">AI</span> Agent
           </DialogTitle>
           <DialogDescription>
-            Tokenize your <span className="font-semibold text-primary">AI</span> (Inteligência Artificial) agent on Arc Network. Set ownership tokens and initial price.
+                Tokenize your <span className="font-semibold text-primary">AI</span> agent on Arc Network. Set ownership tokens and initial price.
           </DialogDescription>
         </DialogHeader>
         <div className="space-y-4 py-4">
