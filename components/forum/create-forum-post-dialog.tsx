@@ -30,6 +30,7 @@ interface CreateForumPostDialogProps {
   open?: boolean
   onOpenChange?: (open: boolean) => void
   children?: React.ReactNode
+  onPostCreated?: () => void;
 }
 
 export function CreateForumPostDialog({
@@ -167,7 +168,7 @@ export function CreateForumPostDialog({
       console.error('❌ Forum post error:', error)
       toast({
         title: 'Error',
-        description: error.message || error.shortMessage || 'Failed to create post',
+        description: error.message || 'Failed to create post',
         variant: 'destructive',
       })
     }

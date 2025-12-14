@@ -113,7 +113,7 @@ export default function AgentDetailPage() {
     circulatingSupply: agentData[8],
     createdAt: agentData[9],
     isActive: agentData[10],
-    capabilities: capabilities || [],
+    capabilities: capabilities ? [...capabilities] : [],
     ownership: ownership || BigInt(0),
   }
 
