@@ -1,6 +1,6 @@
 /**
  * ArcnetAI Contract Configuration
- * AI (Inteligência Artificial) Agent Marketplace for Arc Network
+ * AI Agent Marketplace for Arc Network
  */
 
 /**
