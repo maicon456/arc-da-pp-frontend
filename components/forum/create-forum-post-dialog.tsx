@@ -114,7 +114,7 @@ export function CreateForumPostDialog({
 
     const agentId = postType === PostType.Agent && formData.agentId
       ? BigInt(formData.agentId)
-      : 0n
+      : BigInt(0)
 
     if (postType === PostType.Agent && !formData.agentId) {
       toast({
@@ -202,7 +202,7 @@ export function CreateForumPostDialog({
         <DialogHeader>
           <DialogTitle>Create Forum Post</DialogTitle>
           <DialogDescription>
-                Share documents, photos, <span className="font-semibold text-primary">AI</span> (Inteligência Artificial) agents, or start a discussion. Each post creates an on-chain transaction.
+                Share documents, photos, <span className="font-semibold text-primary">AI</span> agents, or start a discussion. Each post creates an on-chain transaction.
           </DialogDescription>
         </DialogHeader>
         <div className="space-y-4 py-4">
