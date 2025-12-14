@@ -30,13 +30,13 @@ export async function getBaseFeePerGas(): Promise<bigint> {
     const block = await publicClient.getBlock({ blockTag: 'latest' })
     
     // EIP-1559 base fee (in Wei)
-    const baseFee = block.baseFeePerGas || 0n
+    const baseFee = block.baseFeePerGas || BigInt(0)
     
     // Ensure minimum 160 Gwei (Arc Network requirement)
     const minBaseFee = MIN_BASE_FEE_GWEI * GWEI_TO_WEI
     
     // If base fee is 0 or less than minimum, use minimum
-    if (!baseFee || baseFee === 0n || baseFee < minBaseFee) {
+    if (!baseFee || baseFee === BigInt(0) || baseFee < minBaseFee) {
       return minBaseFee
     }
     
