@@ -2,8 +2,8 @@
 const nextConfig = {
   typescript: {
     // Em produção, mantenha false para detectar erros
-    // Em desenvolvimento, pode ser true temporariamente
-    ignoreBuildErrors: process.env.NODE_ENV === 'production' ? false : true,
+    // No Vercel, sempre false para garantir qualidade
+    ignoreBuildErrors: false,
   },
   images: {
     unoptimized: true,
