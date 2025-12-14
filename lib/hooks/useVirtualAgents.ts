@@ -191,7 +191,7 @@ export function useAllAgents() {
                 abi: VirtualAgentABI,
                 functionName: 'getOwnership',
                 args: [agent.id, address as `0x${string}`],
-              }).catch(() => 0n) : 0n
+              }).catch(() => BigInt(0)) : BigInt(0)
 
               return {
                 ...agent,
