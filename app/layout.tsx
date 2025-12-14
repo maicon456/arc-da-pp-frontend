@@ -9,8 +9,8 @@ const _geist = Geist({ subsets: ["latin"] })
 const _geistMono = Geist_Mono({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
-  title: "ArcnetAI | AI (Inteligência Artificial) Agent Marketplace on Arc Network",
-  description: "Create, tokenize, and trade AI (Inteligência Artificial) agents on Arc Network.",
+  title: "ArcnetAI | AI Agent Marketplace on Arc Network",
+  description: "Create, tokenize, and trade AI agents on Arc Network.",
   generator: "v0.app",
   icons: {
     icon: [
