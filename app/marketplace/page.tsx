@@ -74,7 +74,7 @@ export default function MarketplacePage() {
                   Arcnet<span className="bg-gradient-to-r from-primary via-chart-1 to-chart-2 bg-clip-text text-transparent font-extrabold">AI</span>
                 </h1>
                 <p className="text-xs text-muted-foreground">
-                  <span className="font-semibold text-primary">AI</span> (Inteligência Artificial) Agent Marketplace
+                  <span className="font-semibold text-primary">AI</span> Agent Marketplace
                 </p>
               </div>
             </Link>
@@ -106,7 +106,7 @@ export default function MarketplacePage() {
             Create & Trade <span className="bg-gradient-to-r from-primary via-chart-1 to-chart-2 bg-clip-text text-transparent font-extrabold">AI</span> Agents
           </h2>
           <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
-            Tokenize your <span className="font-semibold text-primary">AI</span> (Inteligência Artificial) agents, enable co-ownership, and trade them on the marketplace.
+            Tokenize your <span className="font-semibold text-primary">AI</span> agents, enable co-ownership, and trade them on the marketplace.
             Every agent is a unique asset on Arc Network.
           </p>
           {isConnected && isCorrectChain && contractConfigured && (
@@ -139,7 +139,7 @@ export default function MarketplacePage() {
           <Card>
             <CardContent className="pt-6">
               <div className="text-2xl font-bold">
-                {address ? agents.filter(a => (a.ownership || 0n) > 0n).length : 0}
+                    {address ? agents.filter(a => (a.ownership || BigInt(0)) > BigInt(0)).length : 0}
               </div>
               <p className="text-xs text-muted-foreground">Your Agents</p>
             </CardContent>
