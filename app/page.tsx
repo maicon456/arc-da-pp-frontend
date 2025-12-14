@@ -27,7 +27,7 @@ export default function Home() {
                   Arcnet<span className="bg-gradient-to-r from-primary via-chart-1 to-chart-2 bg-clip-text text-transparent font-extrabold">AI</span>
                 </h1>
                 <p className="text-xs text-muted-foreground">
-                  <span className="font-semibold text-primary">AI</span> (Inteligência Artificial) Agent Marketplace
+                  <span className="font-semibold text-primary">AI</span> Agent Marketplace
                 </p>
               </div>
             </div>
@@ -89,11 +89,10 @@ export default function Home() {
               </div>
               <h2 className="text-5xl md:text-6xl font-bold mb-6 text-balance tracking-tight">
                 Arcnet<span className="bg-gradient-to-r from-primary via-chart-1 to-chart-2 bg-clip-text text-transparent font-extrabold">AI</span>{" "}
-                <span className="text-muted-foreground">Inteligência Artificial</span>{" "}
-                on Arc Network
+                Agents on Arc Network
               </h2>
               <p className="text-lg text-muted-foreground mb-8 text-pretty leading-relaxed max-w-2xl mx-auto">
-                Create, tokenize, and trade <span className="font-semibold text-primary">AI</span> (Inteligência Artificial) agents on Arc Network.
+                Create, tokenize, and trade <span className="font-semibold text-primary">AI</span> agents on Arc Network.
                 Enable co-ownership and build the future of decentralized <span className="font-semibold text-primary">AI</span>.
               </p>
               <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
@@ -139,7 +138,7 @@ export default function Home() {
               <div className="mb-12 text-center">
                 <h3 className="text-3xl font-bold mb-3 tracking-tight">Get Started</h3>
                 <p className="text-muted-foreground mb-6">
-                  Create your first <span className="font-semibold text-primary">AI</span> (Inteligência Artificial) agent or explore the marketplace
+                  Create your first <span className="font-semibold text-primary">AI</span> agent or explore the marketplace
                 </p>
                 <Link href="/marketplace">
                   <Button size="lg" className="gap-2">
