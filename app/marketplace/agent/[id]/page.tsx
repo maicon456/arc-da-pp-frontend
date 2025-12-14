@@ -114,11 +114,11 @@ export default function AgentDetailPage() {
     createdAt: agentData[9],
     isActive: agentData[10],
     capabilities: capabilities || [],
-    ownership: ownership || 0n,
+    ownership: ownership || BigInt(0),
   }
 
   const ownershipPercentage =
-    agent.totalSupply > 0n
+    agent.totalSupply > BigInt(0)
       ? (Number(agent.circulatingSupply) / Number(agent.totalSupply)) * 100
       : 0
 
@@ -231,7 +231,7 @@ export default function AgentDetailPage() {
                   <p className="text-lg font-semibold">{ownershipPercentage.toFixed(1)}%</p>
                 </div>
 
-                {agent.ownership && agent.ownership > 0n && (
+                {agent.ownership && agent.ownership > BigInt(0) && (
                   <div className="bg-primary/10 p-4 rounded-lg">
                     <p className="text-sm text-muted-foreground mb-1">Your Ownership</p>
                     <p className="text-xl font-bold">{agent.ownership.toString()} tokens</p>
@@ -243,7 +243,7 @@ export default function AgentDetailPage() {
 
                 <div className="pt-4 border-t space-y-2">
                   <PurchaseTokensDialog agent={agent} />
-                  {agent.ownership && agent.ownership > 0n && (
+                  {agent.ownership && agent.ownership > BigInt(0) && (
                     <CreateListingDialog
                       agent={agent}
                       userOwnership={agent.ownership}
