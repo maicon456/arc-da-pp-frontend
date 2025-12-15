@@ -34,7 +34,7 @@ interface AgentCardProps {
 
 export function AgentCard({ agent, onChat }: AgentCardProps) {
   const ownershipPercentage =
-    agent.totalSupply > 0n
+    agent.totalSupply > BigInt(0)
       ? (Number(agent.circulatingSupply) / Number(agent.totalSupply)) * 100
       : 0
 
@@ -96,7 +96,7 @@ export function AgentCard({ agent, onChat }: AgentCardProps) {
           </div>
         </div>
 
-        {agent.ownership && agent.ownership > 0n && (
+        {agent.ownership && agent.ownership > BigInt(0) && (
           <div className="bg-primary/10 p-2 rounded text-xs">
             <p className="font-medium">You own: {agent.ownership.toString()} tokens</p>
           </div>
@@ -109,7 +109,7 @@ export function AgentCard({ agent, onChat }: AgentCardProps) {
           </div>
           <div className="flex gap-2">
             <PurchaseTokensDialog agent={agent} />
-            {agent.ownership && agent.ownership > 0n && (
+            {agent.ownership && agent.ownership > BigInt(0) && (
               <CreateListingDialog
                 agent={agent}
                 userOwnership={agent.ownership}

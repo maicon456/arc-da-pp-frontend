@@ -30,6 +30,7 @@ interface CreateForumPostDialogProps {
   open?: boolean
   onOpenChange?: (open: boolean) => void
   children?: React.ReactNode
+  onPostCreated?: () => void;
 }
 
 export function CreateForumPostDialog({
@@ -114,7 +115,7 @@ export function CreateForumPostDialog({
 
     const agentId = postType === PostType.Agent && formData.agentId
       ? BigInt(formData.agentId)
-      : 0n
+      : BigInt(0)
 
     if (postType === PostType.Agent && !formData.agentId) {
       toast({
@@ -167,7 +168,7 @@ export function CreateForumPostDialog({
       console.error('❌ Forum post error:', error)
       toast({
         title: 'Error',
-        description: error.message || error.shortMessage || 'Failed to create post',
+        description: error.message || 'Failed to create post',
         variant: 'destructive',
       })
     }
@@ -202,7 +203,7 @@ export function CreateForumPostDialog({
         <DialogHeader>
           <DialogTitle>Create Forum Post</DialogTitle>
           <DialogDescription>
-                Share documents, photos, <span className="font-semibold text-primary">AI</span> (Inteligência Artificial) agents, or start a discussion. Each post creates an on-chain transaction.
+                Share documents, photos, <span className="font-semibold text-primary">AI</span> agents, or start a discussion. Each post creates an on-chain transaction.
           </DialogDescription>
         </DialogHeader>
         <div className="space-y-4 py-4">

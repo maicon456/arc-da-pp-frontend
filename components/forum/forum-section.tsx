@@ -52,7 +52,7 @@ export function ForumSection() {
         <div>
           <h2 className="text-3xl font-bold tracking-tight">Community Forum</h2>
           <p className="text-muted-foreground mt-2">
-                Share documents, photos, <span className="font-semibold text-primary">AI</span> (Inteligência Artificial) agents, and discussions. Every interaction is on-chain.
+                Share documents, photos, <span className="font-semibold text-primary">AI</span> agents, and discussions. Every interaction is on-chain.
           </p>
         </div>
         <CreateForumPostDialog 
